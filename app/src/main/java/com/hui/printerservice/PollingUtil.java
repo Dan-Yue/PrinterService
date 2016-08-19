@@ -7,10 +7,11 @@ import android.content.Intent;
 import android.os.Build;
 
 /**
+ * 轮询启动service
  * Created by liuhui on 16/3/25.
  */
 public class PollingUtil {
-    //private Context mContext;
+
     public static void startPrintService(Context mContext,Class<?> cls,long seconds,String action){
         AlarmManager am = (AlarmManager) mContext.getSystemService(Context.ALARM_SERVICE);
 

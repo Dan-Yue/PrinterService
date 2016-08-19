@@ -153,7 +153,7 @@ public class Printer {
                 Log.d(TAG, "开始打印……");
                 long startTime = System.currentTimeMillis();
 
-                mConnection.claimInterface(mUsbInterface, false);
+                mConnection.claimInterface(mUsbInterface, true);
                 int ret = mConnection.bulkTransfer(point, content, content.length, 20 * 1000);
                 long endTime = System.currentTimeMillis();
                 Log.d(TAG, "输出" + ret + "字节，耗时：" + (endTime - startTime) + "ms");
